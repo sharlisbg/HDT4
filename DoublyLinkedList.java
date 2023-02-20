@@ -1,6 +1,5 @@
 // Implementation of lists, using doubly linked elements.
 // (c) 1998, 2001 duane a. bailey
-package structure5;
 import java.util.Iterator;
 /**
  * An implementation of lists using doubly linked elements, similar to that of {@link java.util.LinkedList java.util.LinkedList}.
@@ -37,15 +36,15 @@ public class DoublyLinkedList<E> extends AbstractList<E>
     /**
      * Number of elements within list.
      */
-    protected int count;
+    int count;
     /**
      * Reference to head of list.
      */
-    protected DoublyLinkedNode<E> head;
+    DoublyLinkedNode<E> head;
     /**
      * Reference to tail of list.
      */
-    protected DoublyLinkedNode<E> tail;
+    DoublyLinkedNode<E> tail;
 
     /**
      * Constructs an empty list.

@@ -1,6 +1,5 @@
 // A basic, abstract implementation of a Structure.
 // (c) 2001 duane a. bailey
-package structure5;
 import java.util.Collection;
 import java.util.Iterator;
 

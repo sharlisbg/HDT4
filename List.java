@@ -1,7 +1,5 @@
 // Interface for lists.
 // (c) 1998, 2001 duane a. bailey
-
-package structure5;
 import java.util.Iterator;
 /**
  * Interface describing lists.  Lists are collections of data with
