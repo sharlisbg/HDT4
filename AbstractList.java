@@ -1,3 +1,4 @@
+package structure5;
 import java.util.Iterator;
 /**
  * An abstract structure implementing features common to all

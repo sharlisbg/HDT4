@@ -1,5 +1,7 @@
 // Implementation of lists, using singly linked elements.
 // (c) 1998, 2001 duane a. bailey
+
+package structure5;
 import java.util.Iterator;
 import java.util.Enumeration;
 /**
@@ -39,11 +41,11 @@ public class SinglyLinkedList<E> extends AbstractList<E>
     /**
      * The number of elements in list.
      */
-    int count;                    // list size
+    protected int count;                    // list size
     /**
      * The head of the list.  A reference to a singly linked list element.
      */
-    Node<E> head; // ref. to first element
+    protected Node<E> head; // ref. to first element
 
     /**
      * Construct an empty list.
