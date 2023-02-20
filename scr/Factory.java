@@ -1,5 +1,5 @@
 package scr;
-public class FactoryLista<T> {
+public class Factory<T> {
 	
 	
 	public AbstractList<T> getInstance(String type) {
@@ -7,11 +7,11 @@ public class FactoryLista<T> {
 		AbstractList<T> listInstance;
 		
 		switch (type.toLowerCase()) {
-		case "single":{
-			listInstance = new SinglyLinkedList<T>();
+		case "Single":{
+			listInstance = new SingleLinkedList<T>();
 		}break;
 		
-		case "double":{
+		case "Double":{
 			listInstance = new DoubleLinkedList<T>();
 		}break;
 		

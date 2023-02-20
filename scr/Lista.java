@@ -1,8 +1,23 @@
 package scr;
+
 public interface Lista<T>{
 
-    boolean isEmpty();
-    void add(T value);
-    void remove(T value);
+    void InsertAtStart(T value);
+
+    void InsertAtEnd(T value);
+
+    void Insert(T value, int index);
+
+    T Delete(int index);
+
+    T DeleteAtStart();
+
+    T DeleteAtEnd();
+
+    T Get(int index);
+
+    boolean IsEmpty();
+    
+    int Count();
 
 }

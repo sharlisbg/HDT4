@@ -1,16 +1,28 @@
 package scr;
 import java.util.ArrayList;
 
-public class Calculator implements IPostfixCalculator<String>{
+public class Calculator implements IPostFixCalculator<String>{
     // atributos
     private StackUsingArrayList<Integer> arraynumeros;
+    private static boolean instance_flag = false; //true if 1 instance
+	private static Calculator unicaCalculadora; // nos ayudará a implementar Singleton a la Calculadora
 
     // metodos
     /** PostfixCalculator es el constructor de la clase  */
-    public  Calculator() {
+    public Calculator() {
         // creamos una instancia de StackUsingArrayList de enteros
         this.arraynumeros = new StackUsingArrayList<Integer>();
+        this.instance_flag = true;
     }
+
+    public static Calculator getInstance() {
+		if (instance_flag) {
+			return unicaCalculadora;
+		} else {
+			unicaCalculadora = new Calculator();
+			return unicaCalculadora;
+		}
+	}
 
     /** IsOperator es un metodo que indica si el caracter es un operador o no
      * @param valoraevaluar es un int que representa el codigo ascii del caracter
