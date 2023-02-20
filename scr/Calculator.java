@@ -63,7 +63,7 @@ public class Calculator implements IPostFixCalculator<String>{
     }
 
     @Override
-    public int Calculate(ArrayList<String> postfix_expression) throws Exception{
+    public int Calculate(ArrayList<String> postfix_expression, String type) throws Exception{
         // recorremos el arraylist de strings
         int retorno = 0;
         boolean huboerror = false;

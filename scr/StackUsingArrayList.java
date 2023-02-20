@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * @author MAAG
  *
  */
-public class StackUsingArrayList<T> implements IStack<T> {
+public class StackUsingArrayList<T> implements Stack<T> {
 
 	private ArrayList<T> miListaInterna;
 	

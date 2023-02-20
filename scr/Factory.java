@@ -1,26 +1,29 @@
 package scr;
 public class Factory<T> {
 	
-	
-	public AbstractList<T> getInstance(String type) {
+	public IStack<T> getInstance(String type) {
 		
-		AbstractList<T> listInstance;
-		
-		switch (type.toLowerCase()) {
-		case "Single":{
-			listInstance = new SingleLinkedList<T>();
-		}break;
-		
-		case "Double":{
-			listInstance = new DoubleLinkedList<T>();
-		}break;
-		
-		default:{
-			listInstance = null;
+		if(type == null){
+			return null;
 		}
+
+		if(type.equalsIgnoreCase("Lista Simple")){
+			return new StackUsingLinkedList<T>();
 		}
-		
-		return listInstance;
+
+		if(type.equalsIgnoreCase("Lista Doble")){
+			return new StackUsingDoubleLinkedList<T>();
+		}
+
+		if(type.equalsIgnoreCase("Arreglo")){
+			return new StackUsingArrayList<T>();
+		}
+
+		if(type.equalsIgnoreCase("Vector")){
+			return new Vector<T>();
+		}
+
+		return null;
 	}
 
 }

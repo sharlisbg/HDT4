@@ -4,5 +4,5 @@ package scr;
  */
 public interface IPostFixCalculator<T> {
 
-	public int Calculate(java.util.ArrayList<T> postfix_expression) throws Exception;
+	public int Calculate(java.util.ArrayList<T> postfix_expression, String type) throws Exception;
 }
