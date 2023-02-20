@@ -6,7 +6,7 @@ public class Calculator implements IPostfixCalculator<String>{
 
     // metodos
     /** PostfixCalculator es el constructor de la clase  */
-    public  PostfixCalculator() {
+    public  Calculator() {
         // creamos una instancia de StackUsingArrayList de enteros
         this.arraynumeros = new StackUsingArrayList<Integer>();
     }
