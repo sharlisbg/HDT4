@@ -100,7 +100,6 @@ public class DoubleLinkedList<T> implements Lista<T> {
 
 	@Override
 	public T Delete(int index) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -132,7 +131,6 @@ public class DoubleLinkedList<T> implements Lista<T> {
 
 	@Override
 	public T DeleteAtEnd() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

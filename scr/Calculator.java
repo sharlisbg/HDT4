@@ -3,15 +3,14 @@ import java.util.ArrayList;
 
 public class Calculator implements IPostFixCalculator<String>{
     // atributos
-    private StackUsingArrayList<Integer> arraynumeros;
     private static boolean instance_flag = false; //true if 1 instance
 	private static Calculator unicaCalculadora; // nos ayudará a implementar Singleton a la Calculadora
+    private IStack<Integer> arraynumeros; // Para crear una instancia de lo que será una lista o un stack o vector
 
     // metodos
     /** PostfixCalculator es el constructor de la clase  */
     public Calculator() {
         // creamos una instancia de StackUsingArrayList de enteros
-        this.arraynumeros = new StackUsingArrayList<Integer>();
         this.instance_flag = true;
     }
 
@@ -41,16 +40,6 @@ public class Calculator implements IPostFixCalculator<String>{
         return isoperator;
     }
 
-    /** BinaryOperator es un metodo que verifica la existencia de dos operandos en el stack al momento de realizar una operacion
-     * En caso que no tenga al menos dos operandos, lanza una excepcion
-     * @throws Exception
-     */
-    private void BinaryOperator() throws Exception{
-        if (arraynumeros.count()<2) {
-            throw new Exception("La operacion es binaria y no hay suficientes operandos");
-        }
-    }
-
     /** DivisionbyZero es un metodo que verifica que si el divisor es cero. En ese caso, lanza una excepcion.
      * @param operandoB es el divisor
      * @return void
@@ -67,6 +56,8 @@ public class Calculator implements IPostFixCalculator<String>{
         // recorremos el arraylist de strings
         int retorno = 0;
         boolean huboerror = false;
+        arraynumeros = new Factory<Integer>().getInstance(type);
+
         for (String string : postfix_expression) {
             // recorremos cada caracter del string
             for (int i = 0; i < string.length(); i++) {
@@ -89,7 +80,9 @@ public class Calculator implements IPostFixCalculator<String>{
                     if (ascii==42) {
                         try {
                             // verificamos que existan al menos dos operandos en el stack
-                            this.BinaryOperator();
+                            if(arraynumeros.count()<2){
+                                throw new Exception("No hay valores suficientes para realizar la operación");
+                            }
                             // hacemos pull para obtener los operandos
                             int operandoB = arraynumeros.pull();
                             int operandoA = arraynumeros.pull();
@@ -107,7 +100,9 @@ public class Calculator implements IPostFixCalculator<String>{
                     if (ascii == 43) {
                         try {
                             // verificamos que existan al menos dos operandos en el stack
-                            this.BinaryOperator();
+                            if(arraynumeros.count()<2){
+                                throw new Exception("No hay valores suficientes para realizar la operación");
+                            }
                             // hacemos pull para obtener los operandos
                             int operandoB = arraynumeros.pull();
                             int operandoA = arraynumeros.pull();
@@ -124,7 +119,9 @@ public class Calculator implements IPostFixCalculator<String>{
                     // validamos que el operador sea una resta
                     if (ascii == 45) {
                         // validamos que existan al menos dos operadores en el stack
-                        this.BinaryOperator();
+                        if(arraynumeros.count()<2){
+                            throw new Exception("No hay valores suficientes para realizar la operación");
+                        }
                         // hacemos pull para obtener los dos operandos
                         int operandoB = arraynumeros.pull();
                         int operandoA = arraynumeros.pull();
@@ -138,7 +135,9 @@ public class Calculator implements IPostFixCalculator<String>{
                     if (ascii == 47) {
                         try {
                             // validamos que existan al menos dos operadores en el stack
-                            this.BinaryOperator();
+                            if(arraynumeros.count()<2){
+                                throw new Exception("No hay valores suficientes para realizar la operación");
+                            }
                             // hacemos el pull para obtener los dos operandos
                             int operandoB = arraynumeros.pull();
                             int operandoA = arraynumeros.pull();

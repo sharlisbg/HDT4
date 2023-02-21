@@ -214,7 +214,6 @@ public class SingleLinkedList<T> implements Lista<T> {
 
 	@Override
 	public int Count() {
-		// TODO Auto-generated method stub
 		return count;
 	}
    
