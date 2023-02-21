@@ -2,8 +2,10 @@ package scr;
 
 /**
  * @author MAAG
- *
+ * Creación de nodos dobles para la lista doblemente encadenada. 
  */
+
+ 
 public class DoubleNode<T> {
 	private T value;
 	private DoubleNode<T> next;

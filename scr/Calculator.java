@@ -1,6 +1,9 @@
 package scr;
 import java.util.ArrayList;
 
+/*
+ * @author: Ejericio HDT2 y Sharis Barrios
+ */
 public class Calculator implements IPostFixCalculator<String>{
     // atributos
     private static boolean instance_flag = false; //true if 1 instance

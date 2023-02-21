@@ -1,5 +1,10 @@
 package scr;
 
+/**
+ * @author MAAG
+ * Creación de interfaz para creación de listas
+ */
+
 public interface Lista<T>{
 
     void InsertAtStart(T value);

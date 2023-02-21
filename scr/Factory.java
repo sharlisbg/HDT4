@@ -1,6 +1,13 @@
 package scr;
+
+/*
+ * @author: Sharis Barrios
+ */
 public class Factory<T> {
-	
+
+	/*
+	* Se crea un patrón Factory para crear una instancia por cada tipo de pila ya sea lista, arreglo o vector.  
+	*/	
 	public IStack<T> getInstance(String type) {
 		
 		if(type == null){

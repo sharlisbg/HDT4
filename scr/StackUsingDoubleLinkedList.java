@@ -3,7 +3,7 @@ package scr;
 
 /**
  * @author MAAG
- *
+ * Método para convertir una lista doblemente enlazada en un stack
  */
 public class StackUsingDoubleLinkedList<T> implements IStack<T> {
 

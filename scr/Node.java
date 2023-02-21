@@ -1,7 +1,7 @@
 package scr;
 /**
  * @author MAAG
- *
+ * Clase para creación de nodos
  */
 
 public class Node<T> {

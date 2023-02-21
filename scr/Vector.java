@@ -1,5 +1,10 @@
 package scr;
 
+/**
+ * @author: Libro Java Structures
+ *  Método para crear un vector con la interfaz IStack
+ */
+
 public class Vector<T> implements IStack<T> {
     private Node<T> top;
 	int count;

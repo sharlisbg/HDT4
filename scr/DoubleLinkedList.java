@@ -1,6 +1,12 @@
 package scr;
 
 
+/**
+ * @author MAAG
+ * Creación de una Lista doblemente encadenada
+ *
+ */
+
 public class DoubleLinkedList<T> implements Lista<T> {
     private DoubleNode<T> start;
 	private DoubleNode<T> end;

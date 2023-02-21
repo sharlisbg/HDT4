@@ -2,7 +2,7 @@ package scr;
 
 /**
  * @author MAAG
- *
+ *  Método para convertir una lista enlazada en un stack
  */
 public class StackUsingLinkedList<T> implements IStack<T> {
 

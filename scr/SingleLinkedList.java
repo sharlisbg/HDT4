@@ -1,4 +1,10 @@
 package scr;
+
+/**
+ * @author MAAG
+ * Clase para creación de listas simples enlazadas
+ */
+
 public class SingleLinkedList<T> implements Lista<T> {
 
     private int count;

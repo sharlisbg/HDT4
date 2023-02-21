@@ -84,7 +84,7 @@ package scr;
          parametro.add(expresionesvalidas.get(respuesta-1));
 		 
 
-		//Se despliega que medio quiere usar para calcular
+		//Se despliega que pila se quiere usar para calcular las operaciones infix to postfix
 		 System.out.println("¿Qué implementación de pila quiere utilizar?: Arreglo, Lista Simple, Lista Doble, Vector");
 		 System.out.println("Ingrese opción escribiendo la palabra");
 		 String opcionStack = in.nextLine();
