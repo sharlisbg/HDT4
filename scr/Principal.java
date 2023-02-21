@@ -2,6 +2,7 @@ package scr;
 
 /**
  * Principal
+ * @author: Ejercicio hecho en HDT 2 y Sharis Barrios
  */
 
  import java.util.ArrayList;
@@ -77,7 +78,6 @@ package scr;
              System.out.println(contador + ". " + string);
              contador +=1 ;
          }
- 
          int respuesta = in.nextInt();
  
          // seleccionamos la posicion en la que se encuentra la expresion que desea evaluar el usuario y la guardamos en el arraylist parametro
@@ -85,11 +85,9 @@ package scr;
 		 
 
 		//Se despliega que medio quiere usar para calcular
-		 System.out.println("¿Qué quiere utilizar?: Arreglo, Lista Simple, Lista Doble, Vector");
-		 System.out.println("Ingrese opción");
+		 System.out.println("¿Qué implementación de pila quiere utilizar?: Arreglo, Lista Simple, Lista Doble, Vector");
+		 System.out.println("Ingrese opción escribiendo la palabra");
 		 String opcionStack = in.nextLine();
-
-		 
 		 
  
          // pasamos el array llamado parametro como parametro del metodo Calculate de la clase calculadora
@@ -97,11 +95,7 @@ package scr;
              System.out.println("La respuesta a la operacion es " + calculadora.Calculate(parametro, opcionStack));
          } catch (Exception e) {
              System.out.println(e.getMessage());
-         }
- 
-
- 
- 
+         } 
  
      }
      

@@ -52,11 +52,13 @@ public class Calculator implements IPostFixCalculator<String>{
     }
 
     @Override
-    public int Calculate(ArrayList<String> postfix_expression, String type) throws Exception{
+    public int Calculate(ArrayList<String> infix_expression, String type) throws Exception{
         // recorremos el arraylist de strings
         int retorno = 0;
         boolean huboerror = false;
         arraynumeros = new Factory<Integer>().getInstance(type);
+        Infix convertidor;
+        ArrayList<String> postfix_expression = Infix.ToPostFix(infix_expression, type);
 
         for (String string : postfix_expression) {
             // recorremos cada caracter del string
@@ -129,9 +131,9 @@ public class Calculator implements IPostFixCalculator<String>{
                         int resultado = operandoA - operandoB;
                         // hacemos push del resultado
                         arraynumeros.push(resultado);
-                    }
+                    }                    
 
-                    // validamos que el operador sea una disision
+                    // validamos que el operador sea una division
                     if (ascii == 47) {
                         try {
                             // validamos que existan al menos dos operadores en el stack
@@ -175,5 +177,6 @@ public class Calculator implements IPostFixCalculator<String>{
 
         return retorno;
     }
+
 }
 
