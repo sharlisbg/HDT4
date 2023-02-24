@@ -13,7 +13,7 @@ package scr;
  public class Principal {
      public static void main(String[] args) {
          // creamos una instancia de calculadora
-         Calculator calculadora = new Calculator();
+         Calculator calculadora = Calculator.getInstance();
  
          // creamos un arraylist de string donde se va a guardar lo que se lea del archivo de texto
          ArrayList<String> lectura = new ArrayList<String>();

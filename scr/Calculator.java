@@ -12,7 +12,7 @@ public class Calculator implements IPostFixCalculator<String>{
 
     // metodos
     /** PostfixCalculator es el constructor de la clase  */
-    public Calculator() {
+    private Calculator() {
         // creamos una instancia de StackUsingArrayList de enteros
         this.instance_flag = true;
     }
